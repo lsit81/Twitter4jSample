@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Twitter4jTest</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="twitter_key" translatable="false">your twitter key</string>
+    <string name="twitter_secret" translatable="false">your twitter secret</string>
+</resources>
