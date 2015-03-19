@@ -40,4 +40,18 @@ class TwitterPrefs {
         SharedPreferences sharedPreferences = mContext.getSharedPreferences(TWITTERID, Context.MODE_PRIVATE);
         return sharedPreferences.getString(TWITTER_TOKEN_SECRET, null);
     }
+
+    public void removeToken() {
+        SharedPreferences sharedPreferences = mContext.getSharedPreferences(TWITTERID, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.remove(TWITTER_TOKEN);
+        editor.commit();
+    }
+
+    public void removeSecret() {
+        SharedPreferences sharedPreferences = mContext.getSharedPreferences(TWITTERID, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.remove(TWITTER_TOKEN_SECRET);
+        editor.commit();
+    }
 }

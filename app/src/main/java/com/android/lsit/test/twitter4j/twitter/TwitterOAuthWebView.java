@@ -24,6 +24,7 @@ import twitter4j.auth.RequestToken;
  */
 public class TwitterOAuthWebView extends WebView {
     private static final String TAG = TwitterOAuthWebView.class.getSimpleName();
+    public static final String CALLBACK_URL = "your callback url";
     private Twitter mTwitter;
     private RequestToken mRequestToken = null;
 
@@ -84,7 +85,7 @@ public class TwitterOAuthWebView extends WebView {
                     /**
                      * OAuthRequestToken은 별도 쓰레드에서 동작되어야 한다.
                      */
-                    mRequestToken = mTwitter.getOAuthRequestToken();
+                    mRequestToken = mTwitter.getOAuthRequestToken(CALLBACK_URL);
                     post(new Runnable() {
                         @Override
                         public void run() {
